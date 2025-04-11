@@ -1,0 +1,11 @@
+<!-- index.wxml -->
+<head id="head" headstxt='索捷智充' displas='0' />
+<view class="container">
+  <view class="userinfo">
+    <block>
+      <image class="userinfo-avatar" src="/imag/logoliantong.jpg" mode="cover"></image>
+    </block>
+  </view>
+  <!-- <view class="number">{{number}}</view> -->
+</view>
+<!-- < button catchtap="saoma"> 扫码</button> -->

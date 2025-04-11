@@ -1,0 +1,81 @@
+<!-- // phone.wxml -->
+<head id="head" headstxt='登录' displas='0' />
+<view class="register">
+  <!-- logo -->
+  <view class="header-logo">
+    <image src="/imag/sodje-logo.png" mode="aspectFit" />
+  </view>
+  <!-- 输入框 -->
+  <form bindsubmit="formSubmit">
+    <view class="form_item">
+      <view class="form_item_box">
+        <view class="item_content">
+          <view class="item_left">
+            <image class="portrait" src="/imag/{{phoneIcon}}.png" />
+          </view>
+          <!-- 18618347365 -->
+          <input class="item_input" maxlength="11"  bindinput="formInput" data-item="phone" placeholder-class="item_placeholder" name='phoneNum' type='number' value='{{form.phoneNum}}' placeholder="请输入手机号" />
+          <view wx:if="{{judge2 === 0}}"></view>
+          <view wx:elif="{{judge2 === 1}}" class="item_icon">
+            <image class="icon_success" src="/imag/success_login.png" />
+          </view>
+          <view wx:elif="{{judge2 === 2}}" class="item_icon_err">
+            <image class="icon_err" src="/imag/err_login.png" />
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{msg !== ''}}" class="check-msg-tips">{{msg}}</view>
+    </view>
+        <view class="form_item">
+      <view class="form_item_box">
+        <view class="item_content">
+          <view class="item_left">
+            <image class="portrait" src="/imag/{{passwordIcon}}.png" />
+          </view>
+          <input class="item_input" maxlength="6"  bindinput="formInput" data-item="code" placeholder-class="item_placeholder" name='content' type='number' value='{{form.content}}' placeholder="请输入登录密码" />
+          <view wx:if="{{judge3 === 0}}"></view>
+          <view wx:elif="{{judge3 === 1}}" class="item_icon">
+            <image class="icon_success" src="/imag/success_login.png" />
+          </view>
+          <view wx:elif="{{judge3 === 2}}" class="item_icon_err">
+            <image class="icon_err" src="/imag/err_login.png" />
+          </view>
+          <view>
+            <!-- <button class="{{rightBtn?'get-code':'get-success'}}" catchtap="{{rightBtn?'getCodeClick':'verrandomcode'}}">{{btnValue}}</button> -->
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{codeMsg !== ''}}" class="check-msg-tips">{{codeMsg || ''}}</view>
+    </view>
+    <view class="form_item">
+      <view class="form_item_box">
+        <view class="item_content">
+          <view class="item_left">
+            <image class="portrait" src="/imag/{{randomcodeimg}}.png" />
+          </view>
+          <input class="item_input"  maxlength="4" bindinput="formInput" data-item="randomcode" placeholder-class="item_placeholder" name='randomcode' value='{{form.randomcode}}' placeholder="请输入随机码" />
+          <view wx:if="{{judge4 === 0}}"></view>
+          <view wx:elif="{{judge4 === 1}}" class="item_icon randcode">
+            <image class="icon_success" src="/imag/success_login.png" />
+          </view>
+          <view wx:elif="{{judge4 === 2}}" class="item_icon_err randcode">
+            <image class="icon_err" src="/imag/err_login.png" />
+          </view>
+          <view>
+            <canvas canvas-id="canvas" class="canvas" bindtap='cilckchange'></canvas>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{randcodeMsg !== ''}}" class="check-msg-tips">{{randcodeMsg || ''}}</view>
+    </view>
+    <view class="btn-area">
+      <button formType="submit">登录
+        <view class="btn-icon"></view>
+      </button>
+    </view>
+  </form>
+</view>
+<block>
+<!-- <button open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">6666666</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="bindgetuserinfos">777777777</button> -->
+</block>

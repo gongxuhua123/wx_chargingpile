@@ -1,0 +1,88 @@
+
+
+<template name="rowlevel1vet">
+  <block wx:for='{{rowlevel1vet}}' wx:key='index'>
+    <view class="rowlevel1 vet">
+      <text class="ve2-te">身份证号：</text>
+      <text class="ve3-te">{{item.ones}}</text>
+    </view>
+    <view class="rowlevel1 vet">
+      <text class="ve2-te">手机号：</text>
+      <text class="ve3-te">{{item.twos}}</text>
+    </view>
+    <view class="rowlevel1 vet">
+      <text class="ve2-te">门牌号：</text>
+      <text class="ve3-te">{{item.thres}}</text>
+    </view>
+  </block>
+</template>
+
+<template name="rowlevel2vet">
+  <block wx:for='{{cw_list}}' wx:key='index'>
+    <view class="rowlevel1 vet">
+      <text class="ve2-te">月卡车位 </text>
+      <view class="huzhu">户主</view>
+      <text class="ve3-te">{{item.cwPos}}</text>
+    </view>
+    <view class="rowlevel1 vet" wx:for='{{item.cardNum}}' wx:key='index' wx:for-item='tiems'>
+      <text class="ve2-te">卡号{{index + 1}}：</text>
+      <text class="ve3-te">{{tiems}}</text>
+    </view>
+    <view class="rowlevel1 vet">
+      <text class="ve2-te">发卡日期：</text>
+      <text class="ve3-te">{{item.crDate}}</text>
+    </view>
+    <view class="rowlevel1 vet">
+      <text class="ve2-te">到期日期：</text>
+      <text class="ve3-te">{{item.expDate}}</text>
+    </view>
+  </block>
+</template>
+
+<template name="mencen">
+  <view class="Montm" wx:if='{{mencen}}' catchtouchmove='true'></view>
+</template>
+
+<template name="bocks">
+<block wx:for='{{blocks}}' wx:key='index'>
+ <view class="psuccess {{item.pfai? '':'pfailure' }}" catchtouchmove='true'>
+  <view class="pscc1">
+   <image src="/imag/bddc.png"/>
+   <text>3</text>
+   <text wx:if='{{item.pfai}}'>支付成功</text>
+   <text wx:if='{{!item.pfai}}'>支付失败</text>
+  </view>
+  <view class="pscc2">确定</view>
+</view>
+</block>
+</template>
+
+<template name="prompt1">
+<block>
+ <view class="psuccess {{keywordcs? '':'pfailure' }}" catchtouchmove='true'>
+ <image class="pscc5" src="/imag/guanbi.png/"/>
+  <view class="pscc1 lanse">
+   <image src="/imag/bddc.png"/>
+   <!-- <view class="pscc6">您的B区201号车位已经到期了，我们将为您保留三天，如果3天后仍未续费，将为您注销车位</view> -->
+   <view class="pscc6">本小区月卡用户每日可充电3次，不断电充电时长超过3分钟算1次有效充电</view>
+  </view>
+</view>
+</block>
+</template>
+
+<template name="prompt2">
+<block>
+ <view class="psuccess {{keywordcs? '':'pfailure' }}" catchtouchmove='true'>
+ <image class="pscc5" src="/imag/guanbi.png/"/>
+  <view class="pscc1 ">
+   <image src="/imag/bddc.png"/>
+   <!-- <text>3</text> -->
+   <!-- <text>支付成功，开始充电</text> -->
+   <!-- <text>支付失败</text> -->
+  </view>
+  <view class="pscc7">您确定要结束充电么？</view>
+  <view class="pscc2">确定</view>
+  <view class="pscc2">取消</view>
+</view>
+</block>
+</template>

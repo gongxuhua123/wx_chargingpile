@@ -1,0 +1,156 @@
+/*phone.wxss */
+
+.header-logo {
+  width: 293rpx;
+  height: 293rpx;
+  margin: 0 auto;
+  margin-top: 148rpx;
+  margin-bottom: 49rpx;
+}
+.header-logo image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.item_left .portrait {
+  display: block;
+  width: 30rpx;
+  height: 32rpx;
+  margin-left: 19rpx;
+}
+
+.form_item {
+  margin-left: 105rpx;
+  margin-right: 88rpx;
+}
+
+.form_item_box {
+  border-bottom: 1rpx solid #e8eaee;
+}
+
+.form_item_box .item_content {
+  padding: 18rpx 0;
+  display: flex;
+  align-items: center;
+}
+
+.item_content .item_left {
+  width: 90rpx;
+}
+
+.item_content .item_input {
+  flex: 2;
+  height: 64rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 64rpx;
+  color: #000;
+}
+
+.item_placeholder {
+  height: 64rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 64rpx;
+  color: #bbb;
+}
+
+.item_content .item_icon {
+  width: 22rpx;
+  height: 22rpx;
+  overflow: hidden;
+}
+
+.item_icon .icon_success {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.item_content .item_icon_err {
+  width: 22rpx;
+  height: 22rpx;
+}
+
+.icon_err {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.check-msg-tips {
+  width: 100%;
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  padding-left: 92rpx;
+  color: #ff4040;
+}
+
+.btn-area {
+  margin: 58rpx 89rpx 0 104rpx;
+  position: relative;
+}
+
+.btn-area button {
+  width: 557rpx;
+  height: 79rpx;
+  background: linear-gradient(90deg, #5ae2b0 0%, #48c1ff 100%);
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: normal;
+  line-height: 79rpx;
+  color: #fff;
+}
+
+.btn-area .btn-icon {
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 2rpx solid #fff;
+  border-right: 2rpx solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 42rpx;
+  top: 31rpx;
+}
+
+.get-code {
+  min-width: 180rpx;
+  height: 64rpx;
+  background: linear-gradient(90deg, #5ae2b0 0%, #48c1ff 100%);
+  border-radius: 32rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 64rpx;
+  color: #fff;
+  margin-left: 5rpx;
+}
+
+.get-success {
+  min-width: 180rpx;
+  height: 64rpx;
+  background: #ccc;
+  border-radius: 32rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 64rpx;
+  color: #fff;
+  margin-left: 5rpx;
+}
+
+.canvas{
+  width: 180rpx;
+  height: 64rpx;
+  border-radius: 28rpx;
+}
+.randcode{
+  margin-right: 10rpx;
+}

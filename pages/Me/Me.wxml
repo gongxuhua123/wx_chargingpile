@@ -1,0 +1,38 @@
+<head id="head" headstxt='索捷智充' displas='0' />
+<title id="title" titles='' myrate="myrate" />
+<view class='me'>
+  <view class="me1-1">
+    <view class="img" catchtap="userDetails">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+  </view>
+  <view class="me1-2">
+    <!-- <text>{{phoneNum}}</text>
+    <view class="me1-5">{{address}}</view> -->
+    <text>上海索杰</text>
+    <view class="me1-5">上海市黄浦新区三林镇长清路2362号</view>
+    <picker wx:if="{{array!=[]}}" bindchange="bindPickerChange" disabled="{{status ==='fail'?'false':''}}" value="{{index}}" range="{{array}}">
+      <view class="buttonv" bindtap="{{status ==='fail'?'showtis':''}}">切换</view>
+    </picker>
+  </view>
+  <view class="me1-3" catchtap="userDetails">
+    <arrow id='arrow' arrercs='arrercs' arrownum='3' />
+  </view>
+</view>
+<block wx:for='{{views}}' wx:key='index'>
+  <view class="m2" style="{{item.hidy?'height: 470rpx;':''}}" catchtap="bindclickevent" id='{{index}}'>
+    <image src="/imag/{{item.icon}}.png" />
+    <text>{{item.names}}</text>
+    <arrow id='arrow' meright='meright' cardcss='cardcss' arrownum="{{item.arrs}}" />
+    <view class="m5" wx:if='{{item.hidy}}'>
+      <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+    </view>
+  </view>
+</block>
+<block>
+  <view class="m2" catchtap="logout" id='{{index}}'>
+    <image src="/imag/tuichu.png" />
+    <text>退出登录</text>
+    <arrow id='arrow' meright='meright' cardcss='cardcss' arrownum="3" />
+  </view>
+</block>

@@ -1,0 +1,4 @@
+<head id="head" headstxt='详细信息' displas='1' />
+<title id="title" titles='' myrate="myrate" />
+<detain detainlist='{{detalist}}' />
+<view wx:if="{{record}}" class="no-record">无详细信息记录</view>

@@ -1,0 +1,48 @@
+<head id="head" headstxt='绑定户主用户' displas='1' />
+<form bindsubmit='formSubmit'>
+  <view class="bhold">
+    <view class="bhg1">
+      <image src="/imag/ddc.png" />
+      <text>绑定户主-充电桩</text>
+    </view>
+    <view class="bhg2">
+      <view class="bhg2-1">申请人信息</view>
+      <view class="bhg2-2">
+        <text>姓名：</text>
+        <input placeholder="请填写姓名" name='names' placeholder-class="bhg2-2-in" />
+      </view>
+      <view class="bhg2-2">
+        <text>身份证号：</text>
+        <input placeholder="请填写身份证号" name='cards' type="idcard" maxlength="18" placeholder-class="bhg2-2-in" />
+      </view>
+      <view class="bhg2-2">
+        <text>手机号：</text>
+        <input placeholder="请填写手机号" name='phones' value="{{phones}}"  disabled='true' type="number" maxlength="11" placeholder-class="bhg2-2-in" />
+      </view>
+    </view>
+    <view class="bhg2">
+      <view class="bhg2-1">确定户主意愿</view>
+      <view class="bhg2-2" catchtap="bindrChange">
+        <text>小区：</text>
+        <text class="input3 bhg2-2-in" wx:if='{{!sprid4}}'>请选择小区</text>
+        <text class="input3" wx:if='{{sprid4}}'  name='tabnumber'>{{sprid}}-{{sprid2}}-{{sprid3}}-{{sprid4}}</text>
+        <arrow id='arrow' arrercs='arrercs' arrownum="2" />
+      </view>
+      <view class="bhg2-2">
+        <text>姓名：</text>
+        <input placeholder="请填写姓名" name='nameh'bindblur='housname'  placeholder-class="bhg2-2-in" />
+      </view>
+      <view class="bhg2-2">
+        <text>手机号：</text>
+        <input placeholder="请填写手机号" maxlength="11" type="number" name='phoneh' bindblur='housphon' placeholder-class="bhg2-2-in" />
+      </view>
+      <view class="bhg2-2 dispal">
+        <input placeholder="获取验证码" name='code' maxlength="6" type="number" placeholder-class="bhg2-2-in" />
+        <button class="bhg2-3" id='1' form-type="{{times ===''? 'submit':''}}">获取验证码{{times}}{{times ===''? '':'S'}}</button>
+      </view>
+      <view style="height: 40rpx;" />
+    </view>
+  </view>
+  <button class="formbutcs" id='3' form-type="submit">确定</button>
+  <prompt id="prompt" bindbindsecity='bindsecity' selcitylist='{{array}}' />
+</form>

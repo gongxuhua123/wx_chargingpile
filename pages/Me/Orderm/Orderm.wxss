@@ -1,0 +1,113 @@
+page, .main {
+  background-color: #f4f6fa;
+}
+
+.orde {
+  width: 100%;
+  height: 120rpx;
+  background-color: #fff;
+}
+
+.orde1 {
+  width: 100%;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+}
+
+.orde1-tx {
+  font-size: 24rpx;
+  color: #2d3142;
+}
+
+.ordercs {
+  top: 4rpx !important;
+}
+
+.arrercs {
+  width: 16rpx !important;
+  height: 16rpx !important;
+  border-top: 2rpx solid #353333 !important;
+  border-right: 2rpx solid #353333 !important;
+  display: inline-block;
+  margin-left: 20rpx;
+  position: relative;
+  top: -6rpx;
+}
+
+.orde2 {
+  width: 92%;
+  padding: 0 4%;
+  height: 50rpx;
+  line-height: 20rpx;
+}
+
+.orde3 {
+  width: 100%;
+  height: 120rpx;
+}
+
+.orde34 {
+  width: 100%;
+  height: 90rpx;
+  overflow: hidden;
+  border-radius: 22rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.orde34 image:first-child {
+  max-width: 20rpx;
+  max-height: 18rpx;
+  float: left;
+  margin: 12rpx 22rpx 0 12rpx;
+}
+
+.orde34 text:nth-child(2) {
+  font-size: 32rpx;
+  color: #ec5b7f;
+  line-height: 120rpx;
+}
+
+.orde34 text:nth-child(3) {
+  font-size: 30rpx;
+  color: #353333;
+  line-height: 120rpx;
+  margin-left: 40rpx;
+}
+
+.ordercs2 {
+  float: right;
+  margin: 48rpx 34rpx 0 38rpx;
+}
+
+.orde34 text:nth-child(5) {
+  font-size: 36rpx;
+  float: right;
+  line-height: 120rpx;
+  color: #353333;
+  font-weight: bold;
+}
+
+.wujilu {
+  font-size: 30rpx;
+  color: #353333;
+  position: absolute;
+  top: 306rpx;
+  left: 302rpx;
+  z-index: 21;
+}
+
+.chongdfail {
+  color: #ef4836;
+  font-size: 20rpx;
+  width: 100%;
+  height: 35rpx;
+  background-color: #fff;
+  line-height: 30rpx;
+}
+
+.chongdfail text {
+  float: right;
+  margin-right: 95rpx;
+}

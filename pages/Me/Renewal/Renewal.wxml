@@ -1,0 +1,41 @@
+<import src='/template/template.wxml' />
+<template is="head"></template>
+<view class='renew'>
+  <view class="nene1">
+    <text>充值车位：A区A12</text>
+  </view>
+  <view class="nene2">
+    <view class="nene3 {{chooseas == index? 'Chcolor':''}}" wx:for='{{listnenew}}' wx:key='index' id='{{index}}' catchtap="choosea">
+      <text>{{item.yue}}个月</text>
+      <text>￥{{item.jine}}元</text>
+    </view>
+  </view>
+</view>
+<view class="queren {{chooseas ==99?'queren1':''}}" catchtap="{{chooseas ==99?'':'queren'}}">确认充值</view>
+<template is="mencen" data="{{mencen}}" wx:if='{{pullup}}'/>
+<view class="paypopup" wx:if='{{pullup}}'>
+  <view class="ppp1">
+    <text>我的车位</text>
+    <image src="/imag/guanbi.png"/>
+  </view>
+  <view class="ppp2">
+    <view class="ppp2-t">
+      <text>订单编号：DSDFS11566</text>
+      <text>订单内容：月卡车位</text>
+      <text>续费时间：1个月</text>
+      <text>创建时间：2019-08-22 21：14：26</text>
+      <text>容交易单号：GDEG41255</text>
+      <text>商户单号：15687455852245</text>
+    </view>
+    <view class="ppp2-t1">
+      <text>￥9元</text>
+    </view>
+  </view>
+  <view class="ppp3">
+    <text>支付方式</text>
+    <image src="/imag/xiangyou.png"/>
+    <text>零钱</text>
+  </view>
+  <view class="ppp4" catchtap="Confpayment">确认支付</view>
+</view>
+<template is="bocks"  data="{{blocks}}"></template>

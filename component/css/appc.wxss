@@ -1,0 +1,42 @@
+.rowlevel {
+  width: 88%;
+  background-color: #fff;
+  padding: 20rpx 6% 40rpx 6%;
+  border-radius: 22rpx;
+  margin-top: -15rpx;
+  box-shadow: 2rpx 0 4rpx rgba(250, 229, 229, 0.16);
+}
+
+.rowlevel:nth-child(n+2) {
+  margin-top: 20rpx;
+}
+
+.rowlist {
+  width: 100%;
+  /* height: 80rpx; */
+  font-size: 28rpx;
+  overflow: hidden;
+  color: #4b5f7c;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid rgba(36, 52, 90, 0.1);
+}
+
+.ve2 {
+  float: left;
+}
+
+.ve2:nth-child(n+2) {
+  float: right;
+}
+
+.rowlist2 {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.ve1-img {
+  float: left;
+  max-width: 42rpx;
+  height: 33rpx;
+  margin-top: 33rpx;
+}

@@ -1,0 +1,36 @@
+@import '/component/css/appc.wxss';
+.rowlevel{
+  margin-top: 0;
+  border-radius: 0;
+}
+.ve1-img{
+  max-width: 90rpx;
+  height: 64rpx;
+  margin-top: 8rpx;
+}
+.ve1-text{
+  font-size: 32rpx;
+  color: #2D3142;
+  font-weight: bold;
+  margin-left: 30rpx;
+}
+.beizhu{
+max-width: 70%;
+line-height: 55rpx;
+}
+.cccc{
+  width: 100%;
+color: #4b5f7c;
+overflow: hidden;
+border-bottom: 2rpx solid rgba(36, 52, 90, 0.1);
+font-size:28rpx;
+}
+.aaa{
+  float: left;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.bbb{
+  float: right;
+  max-width:70%;
+}

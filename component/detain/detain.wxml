@@ -1,0 +1,46 @@
+<block wx:for='{{detainlist}}' wx:key='index'>
+  <view class='rowlevel'>
+    <view class="rowlist">
+      <text class="ve1">姓名</text>
+      <text class="ve1">{{item.userName}}</text>
+    </view>
+    <view class="rowlist">
+      <text class="ve2">身份证号：</text>
+      <text class="ve2">{{item.IDCardNum}}</text>
+    </view>
+    <view class="rowlist">
+      <text class="ve2">手机号：</text>
+      <text class="ve2">{{item.phoneNum}}</text>
+    </view>
+    <view class="rowlist">
+      <text class="ve2">门牌号：</text>
+      <text class="ve2">{{item.houseName}}</text>
+    </view>
+  </view>
+  <view class='rowlevel' wx:for='{{item.cw_list}}' wx:key='index' wx:for-item="itok">
+    <view class="rowlist rowlist2">
+      <image class="ve1-img" src="/imag/ka2.png" />
+      <view class="vity" wx:if='{{itok.isOwn ==1}}'>我的月卡</view>
+      <view class="vity" wx:if='{{itok.isOwn ==0}}'>我的附属月卡</view>
+      <!-- <view class="ve1-vi" wx:if='{{itok.isOwn ==1}}'>续费</view> -->
+      <!-- catchtap="xufei" -->
+   </view>
+  <view class="rowlist">
+    <text class="ve2">月卡车位 </text>
+    <view class="huzhu" wx:if='{{itok.isOwn ==1}}'>户主</view>
+    <text class="ve2">{{itok.cwPos}}</text>
+  </view>
+  <view class="rowlist" wx:for='{{itok.cardNum}}' wx:key='index' wx:for-item='tiems'>
+    <text class="ve2">卡号{{index + 1}}：</text>
+    <text class="ve2">{{tiems}}</text>
+  </view>
+  <view class="rowlist">
+    <text class="ve2">发卡日期：</text>
+    <text class="ve2">{{itok.crDate}}</text>
+  </view>
+  <view class="rowlist">
+    <text class="ve2">到期日期：</text>
+    <text class="ve2">{{itok.expDate}}</text>
+  </view>
+  </view>
+</block>

@@ -1,0 +1,51 @@
+<view class="rowlevel" wx:for="{{rechargerList}}" wx:key='index'>
+  <view class="rowlist rowlist2">
+    <image class="ve1-img" src="/imag/ddc.png" />
+    <text class="ve1-text">月卡</text>
+    <!-- recSta  0为月卡 1为共享 -->
+  </view>
+  <view class="rowlist">
+    <view class="ve2">所属小区：</view>
+    <view class="ve2">{{item.villageName}}</view>
+  </view>
+  <view class="rowlist">
+    <view class="ve2">车位信息：</view>
+    <text class="ve2">{{item.cwName}}</text>
+  </view>
+  <view class="rowlist" wx:if='{{rechid===1}}'>
+    <text class="ve2">充电卡号：</text>
+    <text class="ve2">{{item.cardNum}}</text>
+  </view>
+  <view class="rowlist" wx:if='{{rechid===1}}'>
+    <text class="ve2">充电开始时间：</text>
+    <text class="ve2">{{item.stDate}}</text>
+  </view>
+  <view class="rowlist" wx:if='{{rechid===1}}'>
+    <text class="ve2">充电结束时间：</text>
+    <text class="ve2">{{item.edDate}}</text>
+  </view>
+  <view class="rowlist" wx:if='{{rechid===1}}'>
+    <text class="ve2">充电时长：</text>
+    <text class="ve2">{{item.isCard}}</text>
+  </view>
+  <view class="rowlist" wx:if='{{rechid===2}}'>
+    <view class="ve2">用户姓名：</view>
+    <text class="ve2">{{item.userName}}</text>
+  </view>
+  <view class="rowlist" wx:if='{{rechid===2}}'>
+    <view class="ve2">手机号：</view>
+    <text class="ve2">{{item.phoneNum}}</text>
+  </view>
+  <view class="rowlist" wx:if='{{rechid===2}}'>
+    <view class="ve2">保修时间：</view>
+    <text class="ve2">{{item.crDate}}</text>
+  </view>
+  <view class="rowlist" wx:if='{{rechid===2}}'>
+    <view class="ve2">报修设备：</view>
+    <text class="ve2">{{item.repair}}</text>
+  </view>
+  <view class="rowlist" wx:if='{{rechid===2}}'>
+    <view class="ve2">保修备注：</view>
+    <view class="ve2 beizhu" >{{item.renotes}}</view>
+  </view>
+</view>

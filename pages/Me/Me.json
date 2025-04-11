@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "head": "/component/head/head",
+    "title": "/component/title/title",
+    "arrow": "/component/arrow/arrow",
+    "ec-canvas": "/component/ec-canvas/ec-canvas"
+  }
+}

@@ -1,0 +1,128 @@
+<view class="kongkong" wx:if='{{tohidea}}'>
+  <image class="kongkong-iamg" src="/imag/is-monthly.png" />
+  <text class="kongkong-text">请先联系小区物业办理开户</text>
+</view>
+<view class="mengc" catchtouchmove="filterViewMove" wx:if='{{failure}}'>
+  <view class="warranty">
+    <image class="mencwarr" src="/imag/warr.png" catchtap="wadetere" />
+    <image class="warranty-imag" src="/imag/battery-car-fff.png" />
+    <text class="warranty-tex1">{{failurenum}}</text>
+    <text class="warranty-tex2">你的报修信息已经发送成功！</text>
+    <view class="wadetere" catchtap="wadetere">确定</view>
+  </view>
+</view>
+<view class="mengc" catchtouchmove="filterViewMove" wx:if='{{powerges}}'>
+  <view class="warranty">
+    <image class="motaitank-imag" src="/imag/battery-car-fff.png" />
+    <text class="motaitank-etx warranty-tex2">您确定要结束充电么？</text>
+    <view class="wadetere motaibuton" catchtap="pdetermine">确定</view>
+    <view class="wadetere motaibuton" catchtap="pcancel">取消</view>
+  </view>
+</view>
+<view class="mengc" catchtouchmove="filterViewMove" wx:if='{{therepairs}}'>
+  <view class="warranty therepairs">
+    <image class="motaitank-imag" src="/imag/battery-car-fff.png" />
+    <text class="thereptext" style="padding-top: 30rpx;">您是否报修该车位</text>
+    <text class="thereptext">确定后该车位将不可使用</text>
+    <text class="thereptext" style="padding-bottom: 30rpx;">需联系小区管理恢复使用！</text>
+    <view class="wadetere motaibuton" catchtap="pdeterminebaoxiu">确定</view>
+    <view class="wadetere motaibuton" catchtap="pcancelbaoxi">取消</view>
+  </view>
+</view>
+<view class="mengc" catchtouchmove="filterViewMove" wx:if="{{numcharge}}">
+  <view class="warranty numcharge">
+    <image class="mencwarr" src="/imag/warr.png" catchtap="bindnumcancel" />
+    <image class="motaitank-imag numch-img" src="/imag/battery-car-fff.png" />
+    <text class="numch-tex">今日充电次数已达上限</text>
+  </view>
+</view>
+<view class="mengc" catchtouchmove="filterViewMove" wx:if="{{thefault}}">
+  <view class="warranty thefault">
+    <image class="mencwarr" src="/imag/warr.png" catchtap="thefaultcancel" />
+    <image class="thefaultim" src="{{maintfault ==='1'?'/imag/uncharged.png':'/imag/fault-errer.png'}}" />
+    <text class="thefault-tex">{{maintfault ==='1'?'设备发生故障请报修':'设备正在维修中请稍后再试'}}</text>
+  </view>
+</view>
+<view class="mengc" catchtouchmove="filterViewMove" wx:if="{{poweucces}}">
+  <view class="warranty">
+    <image class="mencwarr" src="/imag/warr.png" catchtap="bindpocancel" />
+    <image class="motaitank-imag numch-img" src="/imag/battery-car-fff.png" />
+    <text style="display: block;margin: 35rpx 0;">断电成功</text>
+    <text class="numch-tex" style="margin-top: 0;">充电时长：{{powenumber}}分钟</text>
+  </view>
+</view>
+<view class="mengc" catchtouchmove="filterViewMove" wx:if="{{ordermtype}}">
+  <view class="orde4">
+    <view class="orde4-1">选择交易类型</view>
+    <view class="orde4-2">
+      <view class="orde4-3 {{lexing ==index? 'xuanzhong':''}}" wx:for='{{ordermtypel}}' wx:key='index' id='{{index}}' catchtap="clicksele">{{item.name}}</view>
+    </view>
+    <view class="orde4-4" catchtap="quxiaoxuanze">取消选择</view>
+  </view>
+</view>
+<view class="mengc" catchtouchmove="filterViewMove" wx:if="{{selectcity}}">
+  <view class="scityc">
+    <view class="scityc-top">
+      <icon class="scty-t1" type="clear" size="20" id='0' catchtap="unddress" />
+      <text class="scty-t2">请选择所在地区</text>
+      <icon class="scty-t3" type="success" size="20" catchtap="onddress" />
+    </view>
+    <view class="scityc-boy">
+      <view class="sc-boy-tx">
+        <text class="sc-boy-tx4" catchtap="unddress" id='1'>{{sprid}}</text>
+        <text class="sc-boy-tx4" catchtap="chooselcity6" wx:if='{{spridbl ===2 ||spridbl ===3 ||spridbl ===4}}'>{{sprid2}}</text>
+        <text class="sc-boy-tx4" catchtap="chooselcity7" wx:if='{{spridbl ===3 || spridbl ===4}}'>{{sprid3}}</text>
+      </view>
+      <view class="sc-boy-tx2" wx:if='{{spridbl ===4}}'>
+        <text class="sc-boy-tx3" catchtap="chooselcity8">{{sprid4}}</text>
+      </view>
+    </view>
+    <view class="scityc-bott">
+      <scroll-view scroll-y="true" style="height: 100%;">
+        <block wx:for='{{selprovi}}' wx:key='index'>
+          <text class="sc-bocs" id='{{index}}' data-spridbl='{{spridbl}}' catchtap="chooselcity">{{item}}</text>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<view class="mengc" catchtouchmove="filterViewMove" wx:if='{{threetips}}'>
+  <view class="warranty numcharge">
+    <image class="mencwarr" src="/imag/warr.png" catchtap="bindthreetips" />
+    <image class="motaitank-imag numch-img" src="/imag/battery-car-fff.png" />
+    <text class="numch-tex" style="width: 80%;margin-left: 10%;">本小区月卡用户每日可充电3次，不断电充电时长超过3分钟算1次有效充电</text>
+  </view>
+</view>
+<!-- 报修设备 -->
+<view class="mengc" catchtouchmove="filterViewMove" wx:if=''>
+  <view class="warranty therepairthr">
+    <view class="top">报修设备</view>
+    <view class="bodys">
+      <form bindsubmit="formSubmit">
+        <view class="bodys1">
+          <image class="bodys1-img" src="/imag/gantai.png"/>
+          <text class="bodys1-tex">xx小区充电桩A01已报修，如确定故障解除请联系所属物业!</text>
+        </view>
+        <view class="bodys2">
+          <input class="bodys2-inp" placeholder="A充电桩401" placeholder-style="color:#707070;font-size:24rpx;"></input>
+          <view class="bodys2-righ">
+            <arrow id='arrow' arrercs='arrercs' arrownum='2' />
+          </view>
+          <view class="selects">
+          <text class="selects1">烟感</text>
+          <text class="selects1">门禁</text>
+          <text class="selects1">消防</text>
+          </view>
+        </view>
+        <view class="bodys3">
+          <textarea class="bodys3-text" placeholder-class='bodys3-textp' placeholder="请标明该报修设备位置信息......"></textarea>
+        </view>
+        <view class="bodys3">
+          <textarea class="bodys3-text" placeholder-class='bodys3-textp' placeholder="请标明该报修设备详细故障信息......"></textarea>
+        </view>
+        <button form-type="submit" class="bodys5">确认报修</button>
+      </form>
+    </view>
+  </view>
+</view>
+<view class="Unuccess" wx:if='{{slockclicks}}'>开锁成功</view>

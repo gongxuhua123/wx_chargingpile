@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "head": "/component/head/head",
+    "title": "/component/title/title"
+  },
+  "enablePullDownRefresh": true
+}

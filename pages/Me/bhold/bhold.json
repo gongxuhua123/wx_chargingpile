@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "head": "/component/head/head",
+    "arrow": "/component/arrow/arrow",
+    "prompt":"/component/prompt/prompt"
+  }
+}

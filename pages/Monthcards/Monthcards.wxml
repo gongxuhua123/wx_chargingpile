@@ -1,0 +1,73 @@
+<!-- // pages/Monthcards/Monthcards.wxml -->
+<head id="head" headstxt='索捷智充' />
+<title id="title" titles='{{titles}}'/>
+<view class="mcardb" wx:if='{{parkingList}}' wx:for='{{parkingList}}' wx:key='index' style="overflow:hidden;height:{{item.math?'':'192rpx'}};">
+  <view catchtap="amodule" id='{{index}}'>
+    <view class="mcard1">
+      <image src="/imag/ddc.png" />
+      <text>{{item.cwPos}}</text>
+      <arrow id='arrow' arrercs='arrercs' arrownum="{{item.math?'1':'2'}}" />
+    </view>
+    <view class="mcard2" style=" display: {{item.math?'none':''}}">
+      <text class="mcard2t0" wx:if='{{item.cwStatus==3}}'>{{item.cwStatu}}</text>
+      <text class="mcard2t2" wx:if='{{item.cwStatus==4}}'>{{item.cwStatu}}</text>
+      <text class="mcard2t1" wx:if='{{item.cwStatus==5}}'>{{item.cwStatu}}</text>
+      <text class="mcard2t1" wx:if='{{item.cwStatus==6}}'>{{item.cwStatu}}</text>
+    </view>
+  </view>
+  <view class="body">
+    <view class="body1">
+      <image src="/imag/shishi.png" />
+      <text>实时监控</text>
+      <image src="/imag/videimg.png" />
+      <image src="/imag/bofang.png" />
+    </view>
+    <view class="body2">
+      <image src="/imag/zhuangtai.png" />
+      <text>当前状态</text>
+      <view wx:if='{{item.cwStatus ==5 || item.cwStatus ===3 }}' catchtap="{{item.cwStatus ===3 || item.cwStatus===5? 'thewarranty':''}}" id="{{item.devicePortId}}" ids='{{index}}' class="b2tt5 {{item.status===3?'b2tt8':''}}">报修</view>
+      <!-- {{item.cwStatus ===4? '取消':''}} -->
+      <text wx:if='{{item.cwStatus ==3}}'>{{item.cwStatu}}</text>
+      <text wx:if='{{item.cwStatus ==4}}' class="{{item.cwStatus ==4 || item.cwStatu=='充电中'?'b2tt2':''}}">{{item.cwStatu}}</text>
+      <text wx:if='{{item.cwStatus ==5}}' class="b2tt3">{{item.cwStatu}}</text>
+      <text wx:if='{{item.cwStatus ==6}}' class="b2tt3">{{item.cwStatu}}</text>
+    </view>
+    <view class="body2">
+      <image src="/imag/shijian.png" />
+      <text>充电时长</text>
+      <text class="">{{item.times}}</text>
+    </view>
+    <view class="body2">
+      <view class="body2-1">
+        <image src="/imag/dqsj.png" />
+        <text>到期时间</text>
+        <text class="">{{item.expDate}}</text>
+      </view>
+      <view class="body2-2" wx:if='{{item.judgmentday<=7 &&item.judgmentday>=0}}'>
+        <text>您的车位已经到期，请在{{item.judgmentday}}天内完成续费，避免影响使用</text>
+      </view>
+    </view>
+    <view style="overflow:{{item.dropdowns?'':'hidden'}};height: {{item.height1}}rpx;" catchtap="dropdown" id="{{index}}">
+      <view class="body3" wx:for='{{item.cardNum}}' wx:for-item='items' wx:key='index'>
+        <image src="/imag/ka.png" />
+        <text>卡{{index+1}}</text>
+        <arrow id='arrow' arrercs='arrercs' cardcss='cardcss' cardcss2='cardcss2' arrownum="{{item.dropdowns?'1':'2'}}" style="display:{{index ==0? '':'none'}}" />
+        <text style="margin-right: {{index ==0? '':'60rpx'}}">{{items}}</text>
+      </view>
+    </view>
+    <view class="body4">
+      <view class="body4-1">
+        <view class="bot1" catchtap="lockclick" data-cwPos="{{item.devicePortId}}">开锁</view>
+        <view class="bot1 {{item.cwStatus==4 || item.cwStatu=='充电中' ?'bot2':''}}" id="{{index}}" data-cwStatus="{{item.cwStatus}}" data-cwPos='{{item.devicePortId}}' data-cwtimes='{{item.chargeStartTime}}' data-remainCnt='{{item.remainCnt}}' data-status="{{item.status}}" catchtap="{{item.cwStatus ==2 || item.cwStatu=='充电中'?'powerFailure':'lockclick2'}}"
+          style="{{item.cwStatus ==5 ||item.cwStatus ==6 ?' background: #e4e4e4 !important;color: #fff !important;':''}}">{{item.cwStatus ==4 || item.cwStatu=='充电中'?'断电':'充电'}}</view>
+      </view>
+      <view class="body4-2" catchtap="bindthreetips">
+        <text wx:if='{{item.remainCnt >0}}'>本日可充电{{item.remainCnt}}次</text>
+        <text wx:if='{{item.remainCnt <=0}}' style='color: #EF4836;'>本日可充电0次</text>
+        <image src="/imag/gth.png" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<prompt id="prompt" bindparentrun='onShow'/>

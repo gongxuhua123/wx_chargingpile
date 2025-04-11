@@ -1,0 +1,32 @@
+/* pages/Videom/Videom.wxss */
+@import "/pages/Monthcards/Monthcards.wxss";
+
+page {
+  font-family: PingFang SC;
+  width: 100%;
+  height: 100%;
+}
+
+.Vid {
+  width: 100%;
+}
+
+.Vid image:first-child {
+  width: 100%;
+  height: 408rpx;
+  margin-top: -15rpx;
+  border-radius: 22rpx;
+}
+
+.mcard1 {
+  width: 88%;
+  margin: 0 6%;
+  height: 120rpx;
+  padding: 0;
+  border-bottom: 1px solid rgba(36, 52, 90, 0.1);
+}
+
+.body2 {
+  width: 88%;
+  margin: 0 6%;
+}

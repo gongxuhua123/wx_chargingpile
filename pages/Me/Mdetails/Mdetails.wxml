@@ -1,0 +1,57 @@
+<head id="head" headstxt='{{headstxt}}' displas='1' />
+<title id="title" myrate="myrate" />
+<view class="mdet">
+  <view class="mdet1">
+    <image src="/imag/ddc.png" />
+    <text>{{Mlist.recSta == 0 || Mlist.recSta == 1?'月卡':'共享'}}</text>
+    <view class="mdet1-1" wx:if='{{Mlist.recSta == 0 }}'>小区</view>
+    <view class="mdet1-1" wx:if='{{Mlist.recSta == 1 }}'>微信</view>
+    <text class="slot">-{{Mlist.depMoney}}</text>
+  </view>
+  <view class="rowlevel1">
+    <text>当前状态：</text>
+    <text>{{Mlist.recSta == 0 || Mlist.recSta == 1?'车位包月':'支付成功'}}</text>
+  </view>
+  <view class="rowlevel1">
+    <text>订单内容：</text>
+    <text>{{Mlist.recSta == 0 || Mlist.recSta == 1?'月卡车位充电':'共享车位充电'}}</text>
+  </view>
+  <view class="rowlevel1">
+    <text>车位信息：</text>
+    <text>{{Mlist.name1}}区{{Mlist.name2}}</text>
+  </view>
+  <view class="rowlevel1" wx:if='{{Mlist.recSta == 0 || Mlist.recSta == 1}}'>
+    <text>小区名称：</text>
+    <text>{{Mlist.villageAddr}}</text>
+  </view>
+    <view class="rowlevel1" wx:if='{{Mlist.recSta == 2 || Mlist.recSta == 3}}'>
+    <text>地址：</text>
+    <text>{{Mlist.villageAddr}}</text>
+  </view>
+  <view class="rowlevel1">
+    <text>商户全称:</text>
+    <text>上海*******</text>
+  </view>
+  <view class="rowlevel1">
+    <text>支付时间：</text>
+    <text>{{Mlist.crDate}}</text>
+  </view>
+  <view class="rowlevel1">
+    <text>支付方式：</text>
+    <text wx:if='{{Mlist.payType ==1}}'>零钱</text>
+    <text wx:if='{{Mlist.payType ==2}}'>银行卡</text>
+    <text wx:if='{{Mlist.payType ==3}}'>小区管理员充值</text>
+  </view>
+  <view class="rowlevel1" wx:if='{{Mlist.recSta == 0 || Mlist.recSta == 1}}'>
+    <text>订单编号：</text>
+    <text>{{Mlist.idNum}}</text>
+  </view>
+  <view class="rowlevel1" wx:if='{{Mlist.recSta == 2 || Mlist.recSta == 3}}'>
+    <text>交易单号：</text>
+    <text>{{Mlist.idNum}}</text>
+  </view>
+  <view class="rowlevel1">
+    <text>商户单号：</text>
+    <text>6516516651</text>
+  </view>
+</view>

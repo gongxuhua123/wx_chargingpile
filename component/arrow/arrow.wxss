@@ -1,0 +1,23 @@
+.arrow {
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 4rpx solid #353333;
+  border-right: 4rpx solid #353333;
+  opacity: 0.5;
+}
+
+.top {
+  transform: rotate(-45deg);
+}
+
+.bott {
+  transform: rotate(135deg);
+}
+
+.righ {
+  transform: rotate(45deg);
+}
+
+.left {
+  transform: rotate(-135deg);
+}

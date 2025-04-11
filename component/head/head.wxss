@@ -1,0 +1,41 @@
+.content {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.top {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(3, 203, 239, 1) 0%, rgba(6, 235, 206, 1) 100%);
+}
+
+.content2 {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(3, 203, 239, 1) 0%, rgba(6, 235, 206, 1) 100%);
+}
+
+.leftarrow {
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 4rpx solid #fff;
+  border-right: 4rpx solid #fff;
+  transform: rotate(-135deg);
+  position: absolute;
+  margin: 30rpx 0 0 35rpx;
+}
+
+.quyu {
+  width: 10%;
+  height: 88rpx;
+  float: left;
+}
+
+.headtext {
+  font-size: 34rpx;
+  color: #fff;
+  margin-left: -10%;
+}

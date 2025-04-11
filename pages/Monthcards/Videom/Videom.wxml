@@ -1,0 +1,19 @@
+<head id="head" headstxt='{{headstxt}}' />
+<title id="title" titles='{{titles}}'/>
+<view class="Vid">
+  <!-- <live-player src="rtmp://58.200.131.2:1935/livetv/hunantv" mode="live" style="width: 300px; height: 225px;" /> -->
+  <image src="/imag/123.jpg"/>
+</view>
+<view class="mcardb">
+  <view class="mcard1">
+    <image src="/imag/ddc.png"/>
+    <text>B区201</text>
+  </view>
+  <view class="body2">
+    <image src="/imag/zhuangtai.png"/>
+    <text>当前状态</text>
+    <text class="">未充电</text>
+  </view>
+  <!-- binderror="error"  -->
+  <!-- <live-player src="rtmp://58.200.131.2:1935/livetv/hunantv" mode="RTMP" autoplay bindstatechange="statechange" style="width: 300px; height: 225px;" /> -->
+</view>

@@ -1,0 +1,4 @@
+<view class="arrow top arrercs ordercs cardcss2" wx:if='{{arrownum ==="1"}}' />
+<view class="arrow bott arrercs cardcss" wx:if='{{arrownum ==="2"}}' />
+<view class="arrow righ arrercs ordercs2 meright" wx:if='{{arrownum ==="3"}}' />
+<view class="arrow left arrercs" wx:if='{{arrownum ==="4"}}' />

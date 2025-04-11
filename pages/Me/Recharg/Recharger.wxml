@@ -1,0 +1,3 @@
+<head id="head" headstxt='{{recode}}记录'  displas='1' />
+<recha id='recha' rechid='{{rechid}}' bindparentrun='parentrun'/>
+<view wx:if="{{norecd}}" class="no-record">无{{recode}}记录</view>

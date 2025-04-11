@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "head": "/component/head/head",
+    "recha": "/component/recha/recha"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance":50
+}

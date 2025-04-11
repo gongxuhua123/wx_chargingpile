@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "head": "/component/head/head",
+    "title":"/component/title/title",
+    "prompt":"/component/prompt/prompt",
+    "arrow": "/component/arrow/arrow"
+  },
+  "enablePullDownRefresh": true
+}

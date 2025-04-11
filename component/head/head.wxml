@@ -1,0 +1,15 @@
+<view class="content">
+  <view class="top" style="height:{{heights}}px"></view>
+  <view class="content2">
+    <view class="quyu" bindtap="{{displas==0?'':'returns'}}">
+      <view class="leftarrow" style="display:{{displas==0?'none':''}}"></view>
+    </view>
+    <text class="headtext">{{headstxt}}</text>
+  </view>
+</view>
+<view class="content3" style="width: 100%;">
+ <view class="top" style="height:{{heights}}px"></view>
+   <view class="content2">
+
+  </view>
+</view>

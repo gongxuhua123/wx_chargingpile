@@ -1,0 +1,52 @@
+{
+  "pages": [    "pages/Me/Me",
+    "pages/login/phone/phone",
+    "pages/Monthcards/Monthcards",
+    "pages/index/index",
+
+    "pages/Me/Recharg/Recharger",
+    "pages/login/lddress/lddress",
+    "pages/Me/Detainfo/Detainfo",
+    "pages/Monthcards/Videom/Videom",
+    "pages/Me/bhold/bhold",
+    "pages/Me/Orderm/Orderm",
+    "pages/Me/Mdetails/Mdetails",
+    "pages/Me/Renewal/Renewal",
+    "pages/Sharedpark/Sharedpark",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/Monthcards/Monthcards",
+        "text": "月卡车位",
+        "color": "#3E4857",
+        "selectedColor": "#57DDBA",
+        "backgroundColor": "#ffffff",
+        "iconPath": "imag/aa1.png",
+        "selectedIconPath": "imag/aa2.png"
+      },
+      {
+        "pagePath": "pages/Me/Me",
+        "text": "我的",
+        "color": "#3E4857",
+        "selectedColor": "#57DDBA",
+        "backgroundColor": "#ffffff",
+        "iconPath": "imag/dd1.png",
+        "selectedIconPath": "imag/dd2.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
